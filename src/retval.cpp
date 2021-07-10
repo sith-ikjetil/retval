@@ -52,6 +52,11 @@ void PrintUsage()
 	cout << endl;
 }
 
+//
+// Function: IsArgNumber
+//
+// (i): Is given string argument a number.
+//
 bool IsArgNumber(char *num)
 {
 	if (num == nullptr) {
