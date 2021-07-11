@@ -29,12 +29,12 @@ int main(int argc, char *argv[])
 		return EXIT_FAILURE;
 	}
 
-	if ( IsArgNumber(argv[1]) ) {
-		return atoi(argv[1]);
+	if ( !IsArgNumber(argv[1]) ) {
+		PrintUsage();
+		return EXIT_FAILURE;
 	}
 
-	PrintUsage();
-	return EXIT_FAILURE;
+	return atoi(argv[1]);
 }
 
 //
@@ -64,6 +64,9 @@ bool IsArgNumber(char *num)
 	}
 
 	for (int i = 0; i < strlen(num); i++) {
+		if (i == 0 && (num[i] == '+' || num[i] == '-')) {
+			continue;
+		}
 		if (!isdigit(num[i])) {
 			return false;
 		}
