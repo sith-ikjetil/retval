@@ -7,6 +7,8 @@ retval v.1.0 (amd64)
 Usage: retval [return value integer]
 
 Example: (return with exit/return code 5)
-    retval 5
+? retval 5
+? echo $?
+5
 ```
 
