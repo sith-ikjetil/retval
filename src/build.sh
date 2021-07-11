@@ -1,1 +1,1 @@
-g++ ./retval.cpp -o retval
+g++ -m64 ./retval.cpp -o retval

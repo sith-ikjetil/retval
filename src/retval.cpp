@@ -48,7 +48,9 @@ void PrintUsage()
 	cout << "Usage: retval <return value integer>" << endl;
 	cout << endl;
 	cout << "Example: (return with exit/return code 5)" << endl;
-	cout << "    retval 5" << endl;
+	cout << "? retval 5" << endl;
+	cout << "? echo $?" << endl;
+	cout << "5" << endl;
 	cout << endl;
 }
 
