@@ -1,3 +1,9 @@
+//: Title       : retval
+//: Date        : 2021-07-10
+//: Author      : Kjetil Kristoffer Solberg <post@ikjetil.no>
+//: Version     : 1.0
+//: Description : Application starts and immediately exits with exit code given as argument.
+//: Usage       : retval <integer exit code>
 //
 // #include
 //
