@@ -37,8 +37,10 @@ void PrintUsage();
 //
 int main(int argc, char *argv[])
 {
-	if (argc != 2) {
-		PrintUsage();
+	PrintUsage();
+
+	if (argc != 2) {	
+		cout << "ABEND FAILURE. INVALID NUMBER OF ARGUMENTS." << endl;
 		return EXIT_FAILURE;
 	}
 	
@@ -48,12 +50,10 @@ int main(int argc, char *argv[])
 		r = stoi(argv[1]);
 	}
 	catch ( std::logic_error ) {
-		PrintUsage();
-		cout << "ABEND ERROR: INVALID ARGUMENT VALUE. NOT A NUMBER." << endl;
+		cout << "ABEND FAILURE: INVALID ARGUMENT VALUE. NOT A NUMBER." << endl;
 		return EXIT_FAILURE;
 	}
 
-	cout << "Return value is: " << r << endl;
 	return r;
 }
 
